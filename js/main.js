@@ -13,7 +13,7 @@ var web = new Vue({
     },
     methods: {
         getLessons: function () {
-            fetch("http://localhost:3000/collection/lessons")
+            fetch("https://nasiru-cst.herokuapp.com/collection/lessons")
                 .then(res => {
                     return res.json()
                 })
@@ -104,7 +104,7 @@ var web = new Vue({
                 items: this.cart
             }
             let order_string = (JSON.stringify(order))
-            fetch('http://localhost:3000/collection/orders', {
+            fetch('https://nasiru-cst.herokuapp.com/collection/orders', {
                 method: "POST",
                 body: order_string,
                 headers: {
@@ -134,7 +134,7 @@ var web = new Vue({
                 }
             }
             let stockString = (JSON.stringify(stockNew))
-            fetch('http://localhost:3000/collection/lessons', {
+            fetch('https://nasiru-cst.herokuapp.com/collection/lessons', {
                 method: "PUT",
                 body: stockString,
                 headers: {
