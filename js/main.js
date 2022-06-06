@@ -197,9 +197,7 @@ var web = new Vue({
         },
         sortedArray: function() {
             let allLessons = this.lessons
-            // allLessons = allLessons.filter((lesson) => {
-            //     return lesson.subject.toLowerCase().match(this.searchValue.toLowerCase()) || lesson.location.toLowerCase().match(this.searchValue.toLowerCase())
-            // })
+         
             if (this.sortType == 'price') {
                 allLessons = this.sortPrice(allLessons)
             }
